@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NYC Petit Larceny</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+      <img src="ny_images/historical/historical_area.png">
+      <p>
+          In New York City, <strong>petit larceny</strong> includes minor theft offenses such as shoplifting and 
+          stealing unattended items. The plot above shows the yearly total of petit larceny incidents with the 
+          2023 totals from each borough along the right side. 
+          <br>
+          <br> 
+            This project explores trends in petit larceny across the 
+            city’s five boroughs—Manhattan, Brooklyn, Queens, the Bronx, and Staten Island—from 
+            2010 to 2023. Using visualizations, it compares larceny rates alongside a handful of 
+            economic indicators from census data to highlight patterns and disparities.
+          <br>
+          <br>
+            <strong>All data used in this project consists of yearly totals.</strong>
+          <br>
+      </p>  
+      
+    </header>
+
+
+    <!-- First Section -->
+    <div class="section">
+        <h2>NYC MAP</h2>
+        <img src="ny_images/historical/map.png" alt="NYC Map" class="responsive">
+        <p>
+            Manhattan and the Bronx are closely connected, as are Queens and Brooklyn, while Staten Island 
+            sits more isolated. These geographic relationships help frame the borough-level trends we’ll explore.
+        </p>
+
+        
+        <h2>Yearly Household Income by Borough</h2>
+        <p>
+            By normalizing the data within each borough, we can see the percentage of households in each of the 
+            five income groups from 2010 to 2023.
+        </p>
+        <div class="image-container">
+            <img src="ny_images/historical/household_income.png" alt="household_income">
+        </div>
+        <p>
+            In all five boroughs, the upper and middle classes have steadily expanded over time, with the most 
+            dramatic upper-class growth in Manhattan. As of 2023, 69% of households in the Bronx fall into poor, 
+            poverty, and extreme poverty categories — a significantly higher proportion than in any other borough, 
+            highlighting a persistent economic disparity.
+        </p>
+        
+       
+       
+        <img src="ny_images/historical/unemployment_rate.png" alt="unemployment_rate" style="max-width: 400px; height: auto; display: block; margin: 0 auto;">
+         <p>
+            In 2023, Manhattan and the Bronx were the only boroughs with unemployment rates above the citywide 
+            average—highlighting ongoing labor market challenges in both areas.
+            <br>
+            <br>
+            Now that we’ve explored some of NYC’s economic context, let’s take another look at how petit larceny 
+            incidents are distributed across the boroughs.
+        </p>
+        
+        
+        
+
+        <h2>Petit Larceny Incident Distribution</h2>
+        <p>
+          These boxplots show the yearly distribution of total petit larceny incidents in each borough from 2010 to 2023.
+
+        </p>
+        <img src="ny_images/historical/boxplot_numpeople.png" alt="boxplot_totals" class="responsive">
+        <p>
+            Looking at the shape of each distribution, Manhattan has been the most prone to spikes in incidents, while Staten Island shows a much narrower range.
+            All five boroughs, however, experienced a post-pandemic surge, reaching new highs in 2022 and 2023.
+            <br>
+            <br>
+            Now, let’s adjust for population size to better understand where petit larceny incidents are more or less concentrated. 
+        </p>
+
+        <img src="ny_images/historical/boxplot_percapita.png" alt="boxplot_percapita" class="responsive">
+        <p>
+            When we look at incidents per capita, the distribution shifts—placing the Bronx just behind Manhattan, 
+            and bringing Queens much closer to the smaller population of Staten Island. Interestingly, the two 
+            boroughs with the highest per capita incident rates also had the highest unemployment rate in 2023.
+        </p>
+
+        <p>
+          Next, we’ll explore broader trends in census-based economic data.
+          By applying <strong>min-max scaling</strong> within each 
+          borough, we can visually examine how these metrics have changed over time. 
+          <br>
+          <br>
+            Keep in mind the <strong>data represents yearly total number of incidents or the 
+            yearly total number of people in each economic category</strong>. 
+        </p>
+    </div>
+
+    <!-- Second Section -->
+    <div class="section">
+    
+
+        <h2>Petit Larceny Incidents</h2>
+        <p>
+          After applying min-max normalization, larger areas represent years with higher totals, 
+          while smaller areas reflect lower values. This makes it easier to spot relative highs 
+          and lows within each borough over time.
+        </p>
+        <div class="image-container">
+            <img src="ny_images/historical/scaled_petit_larceny_incidents.png" alt="scaled_incidents" class="time">
+        </div>
+        <p>
+            Manhattan, Brooklyn, Queens, and the Bronx saw their highest incident counts in 2022, 
+            while Staten Island peaked in 2023. Staten Island also showed elevated totals in 2014 
+            and 2013, with levels in 2014 nearly matching those of 2022. Additionally, the Bronx 
+            experienced a noticeable rise in 2019.
+    
+        
+        <h2>Unemployed</h2>
+        <div class="image-container">
+            <img src="ny_images/historical/unemployed.png" class="time">
+        </div>
+        <p>
+          Unemployment steadily declined across NYC from 2010, hitting a citywide low in 2019.
+          However, by late 2020 rates began to surge—peaking in 2021 at levels not seen since 2011.
+          A decade of progress was quickly erased, though conditions began to stabilize by 2022. 
+          <strong>A year before petit larceny incidents peaked, the number of unemployed people 
+            also peaked</strong>.  
+        </p>
+      
+        
+        <h2>Armed Forces</h2>
+        <div class="image-container">
+            <img src="ny_images/historical/armed_forces.png" class="time">
+        </div>
+        <p>
+            The number of people working in the Armed Forces steadily declined from 2010 until a 
+            citywide spike in 2022, bringing levels back in line with those seen a decade earlier.
+            <strong>
+                A notable spike in petit larceny incidents occurred at the same time, mirroring 
+                the rise in Armed Forces employment.
+            </strong>
+        </p>
+ 
+        
+        <h2>Information</h2>
+        <div class="image-container">
+            <img src="ny_images/historical/Information.png" class="time">
+        </div>
+        <p>
+            The information sector remained relatively stable from 2012 to 2021.
+            In 2021, Manhattan hit a timeline low, while numbers also declined in Queens and the Bronx.
+            By 2022, the sector peaked citywide—yet dropped to new lows in the Bronx and Staten Island 
+            the following year.
+            <strong>This citywide expansion coincided with the spike in petit larceny incidents.</strong>
+        </p>
+       
+        
+        <h2>Wholesale Trade</h2>
+        <div class="image-container">
+            <img src="ny_images/historical/wholesale_trade.png" class="time">
+        </div>
+        <p>
+            Wholesale Trade employment declined in 2021, with Staten Island hitting an all-time low.
+            While the other four boroughs continued to decline, Staten Island saw a notable rebound in 2022.
+            <strong>This decline in wholesale trade jobs coincided with the spike in petit larceny incidents.</strong>
+        </p>
+
+
+        <h2>Manufacturing</h2>
+        <div class="image-container">
+            <img src="ny_images/historical/manufacturing.png" class="time">
+        </div>
+        <p>
+            Manufacturing jobs steadily declined across NYC starting in 2012.
+            By 2021, Staten Island maintained relatively higher employment, 
+            while the other boroughs reached lows—a trend that continued until an expansion in 2023.
+            <strong>These lows in manufacturing employment coincided with peaks in petit larceny incidents.</strong> 
+        </p>
+        
+
+        <h2>Natural Resources, Construction, Maintenance</h2>
+        <div class="image-container">
+            <img src="ny_images/historical/natural_resources.png" class="time">
+        </div>
+        <p>
+            Employment in Natural Resources, Construction, and Maintenance remained relatively stable with minor fluctuations until a sharp decline in 2020.
+            By 2021, all boroughs saw significant job losses, followed by only a modest rebound later years.
+            <strong>Yet another instance of job loss aligning with peaks in petit larceny incidents.</strong>
+        </p>
+        
+        
+        <h2>Agriculture, Forestry, Fishing, Hunting, and Mining</h2>
+        <div class="image-container">
+            <img src="ny_images/historical/agriculture.png" class="time">
+        </div>
+        <p>
+            The combined agriculture, forestry, fishing, hunting, and mining industries showed varying peaks 
+            across time and boroughs. <strong>Manhattan saw its highest levels in 2022</strong>, but overall, these occupations 
+            don’t exhibit a clear or consistent trend across the city.
+        </p>
+        
+        
+        <h2>Arts, Entertainment, Recreation, Accommodation, Food Services</h2>
+        <div class="image-container">
+            <img src="ny_images/historical/arts.png" class="time">
+        </div>
+        <p>
+            From 2010 to 2014, arts, entertainment, recreation, accommodation, and food services steadily grew, 
+            stabilizing through 2020. By the end of 2020, the sector saw a sharp decline across all 
+            boroughs—except Staten Island, where levels remained steady.
+            Recovery began after 2021, though the Bronx experienced the slowest rebound.
+            <strong>These industries declined a year before petit larceny incidents peaked.</strong>
+        </p>
+        
+
+        <h2>Worked From Home</h2>
+        <div class="image-container">
+            <img src="ny_images/historical/worked_from_home.png" class="time">
+        </div>
+        <p>
+            From 2010 to 2020, working from home remained relatively uncommon across all boroughs.
+            In 2021, it surged to a timeline high citywide, followed by a slight decline in 2022 and 
+            2023—though rates remained elevated.
+            <strong>Remote work peaked one year before petit larceny rates spiked.</strong>
+        </p>
+
+        <p>
+            As remote work surged, we’d expect fewer people commuting. 
+            Let’s explore how different modes of travel changed over time.
+        </p>
+        
+        
+
+        <h2>Walked</h2>
+        <div class="image-container">
+            <img src="ny_images/historical/walked.png" class="time">
+        </div>
+        <p>
+            In 2021, the number of people walking to work hit its lowest levels in Manhattan and 
+            the Bronx. While most boroughs saw a steady rebound in foot traffic, Queens continued 
+            to decline, reaching its lowest point.
+        </p>
+        
+
+        <h2>Public Transportation</h2>
+        <div class="image-container">
+            <img src="ny_images/historical/public_transportation.png" class="time">
+        </div>
+        <p>
+            After a decade of steady use, public transportation dropped sharply across all five boroughs in 2021, 
+            followed by a gradual rebound in the years that followed.  
+        </p>
+        
+
+        <h2>Drive Alone to Work</h2>
+        <div class="image-container">
+            <img src="ny_images/historical/drove_alone.png" class="time">
+        </div>
+        <p>
+            Solo driving to work spiked in 2017, declined through 2020, and hit a low in 2021 before 
+            stabilizing again in 2022. 
+        </p>
+        <p>
+            Overall, commuting dropped sharply in 2021 and rebounded by 2022—coinciding with the 
+            spike in petit larceny incidents. <strong>The rise in theft may reflect more people 
+            returning to public life.</strong> 
+        </p>
+
+
+        <h2 style="color:beige">Conclusion</h2>
+        <p>
+            This exploratory analysis examined trends in petit larceny incidents across New York City’s 
+            five boroughs from 2010 to 2023, alongside key economic and labor indicators. The visualizations 
+            revealed potential connections between economic instability, employment shifts, commuting 
+            patterns, and spikes in theft. Notably, boroughs with higher unemployment and economic 
+            hardship—like the Bronx and Manhattan—tended to experience higher rates of petit larceny, 
+            especially in the years following the COVID-19 pandemic. These patterns suggest that broader 
+            socioeconomic conditions may play a meaningful role in shaping crime trends.
+        </p>
+
+
+         <h2 style="color:beige">Next Steps</h2>
+         <p>
+            To deepen the analysis, future work could explore neighborhood-level data, incorporate 
+            variables like police activity or income inequality, and apply statistical or machine 
+            learning models to assess causality. Incorporating qualitative data or city planning 
+            insights could also help contextualize the trends observed. As new data becomes available, 
+            especially post-2023, this framework can continue to inform urban safety and policy 
+            discussions.
+         </p>
+        
+         <p style="padding-bottom: 100px; font-size: smaller;">
+            <br>_____<br>
+          Sources: <strong>American Community Survey (ACS) Data Profile (DP03), NYC Open Data portal</strong>
+         </p>
+      </div>
+<!-- End page content -->
+</body>
+<footer style="text-align: center; color: white;">
+  <div style="font-size: 1.5rem;">
+    <a href="mailto:geronimowalker@gmail.com" target="_blank" title="Email" style="margin: 0 10px; color: white;">
+      <i class="fa fa-envelope"></i>
+    </a>
+    <a href="https://github.com/geronimobwalker" target="_blank" title="GitHub" style="margin: 0 10px; color: white;">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/geronimowalker" target="_blank" title="LinkedIn" style="margin: 0 10px; color: white;">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+</footer>
+
+</html>
