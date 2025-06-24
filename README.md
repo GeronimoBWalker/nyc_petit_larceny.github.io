@@ -34,6 +34,4 @@ You can view the live version here:
 📬 Contact
 📧 geronimowalker@gmail.com
 
-💼 LinkedIn
-
-💻 GitHub
+💼 linkedin.com/in/geronimowalker
