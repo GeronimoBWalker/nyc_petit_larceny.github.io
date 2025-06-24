@@ -27,11 +27,8 @@ Font Awesome (Icons)
 
 Data visualization with Python/Altair (charts rendered as images)
 
-🚀 Getting Started
-You can view the live version here:
-👉 https://nyc_petit_larceny.github.io
-
 📬 Contact
+
 📧 geronimowalker@gmail.com
 
 💼 linkedin.com/in/geronimowalker
